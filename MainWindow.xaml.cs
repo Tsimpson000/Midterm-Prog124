@@ -22,21 +22,19 @@ namespace Midterm
     {
         public MainWindow()
         {
+            InitializeComponent();
             RegularMember rg = new RegularMember("Tyler", "Simpson");
             rtbDisplay.Text = rg.ToString();
         }
 
-        //Opens new product window
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
             new AddProduct().Show();
         } //btnAddProduct_Click
 
-        //Opens new member window
         private void btnAddMember_Click(object sender, RoutedEventArgs e)
         {
             new AddMember().Show();
-        } //btnAddMember_Click
-
+        }
     }
 }

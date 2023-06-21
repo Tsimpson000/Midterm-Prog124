@@ -15,6 +15,8 @@ namespace Midterm
         int _points;
         static int _numberOfProduct;
 
+        public int Points { get => _points; set => _points = value; }
+
         public Product(string name, double price, int points)
         {
             _name = name;

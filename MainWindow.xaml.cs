@@ -22,9 +22,8 @@ namespace Midterm
     {
         public MainWindow()
         {
-            InitializeComponent();
-            Tea tea = new Tea("tea", 10, 10);
-            rtbDisplay.Text = tea.ToString();
+            RegularMember rg = new RegularMember("Tyler", "Simpson");
+            rtbDisplay.Text = rg.ToString();
         }
 
         //Opens new product window

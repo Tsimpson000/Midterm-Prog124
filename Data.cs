@@ -30,19 +30,19 @@ namespace Midterm
 
         public static void AddProductToCollection(Product product)
         {
-            throw new NotImplementedException();
+            _products.Add(product);
         }
         public static void AddMemberToCollection(Member member)
         {
-            throw new NotImplementedException();
+            _members.Add(member);
         }
         public static void UpdateCurrentProduct(Product product)
         {
-            throw new NotImplementedException();
+            _currentProduct = product;
         }
         public static void UpdateCurrentMember(Member member)
         {
-            throw new NotImplementedException();
+            _currentMember = member;
         }
     }
 }

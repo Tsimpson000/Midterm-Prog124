@@ -9,6 +9,13 @@
     <Canvas Background="#FF631616">
         <Button x:Name="btnAddProduct" Content="Prouct" Canvas.Left="154" Canvas.Top="280" HorizontalAlignment="Center" VerticalAlignment="Top" Width="131" Height="30" Click="btnAddProduct_Click"/>
         <Button x:Name="btnAddMember" Content="Member" Canvas.Left="400" Canvas.Top="280" Width="131" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnAddMember_Click"/>
+        <RichTextBox Height="217" Width="220" Canvas.Left="246" Canvas.Top="32">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="rtbDisplay" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Canvas>
 </Window>

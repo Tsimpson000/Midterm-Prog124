@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Midterm
 {
-    internal class Drink
+    public abstract class Drink : Product
     {
+        protected Drink(string name, double price, int points) : base(name, price, points)
+        {
+        }
     }
 }

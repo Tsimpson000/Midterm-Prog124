@@ -23,6 +23,8 @@ namespace Midterm
         public MainWindow()
         {
             InitializeComponent();
+            Tea tea = new Tea("tea", 10, 10);
+            rtbDisplay.Text = tea.ToString();
         }
 
         //Opens new product window

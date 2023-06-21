@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Midterm
 {
-    internal class Breakfast
+    public class Breakfast : Food
     {
+        public Breakfast(string name, double price, int points) : base(name, price, points)
+        {
+        }
     }
 }

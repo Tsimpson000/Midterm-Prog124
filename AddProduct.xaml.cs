@@ -22,6 +22,18 @@ namespace Midterm
         public AddProduct()
         {
             InitializeComponent();
+            lbProduct.ItemsSource = Data.Products;
+        }
+
+        private void btnTestProduct_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            double price = rand.Next(1, 11) + rand.NextDouble();
+            int point = rand.Next(100, 1001);
+            
+            Tea tea = new Tea("tea", price, point, (Drink.DrinkSize)rand.Next(0,4));
+
+            Data.AddProductToCollection(tea);
         }
     }
 }

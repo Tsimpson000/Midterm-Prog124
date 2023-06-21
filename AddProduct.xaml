@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="AddProduct" Height="450" Width="800">
     <Canvas Background="#FF39673E">
-        
+        <ListBox x:Name="lbProduct" Height="369" Width="344" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="424" Canvas.Top="33" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="btnTestProduct" Content="Test Add&#xD;&#xA;" Canvas.Left="95" Canvas.Top="190" Height="67" Width="171" Click="btnTestProduct_Click"/>
+
     </Canvas>
 </Window>

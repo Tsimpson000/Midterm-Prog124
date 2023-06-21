@@ -23,8 +23,11 @@ namespace Midterm
         public MainWindow()
         {
             InitializeComponent();
-            RegularMember rg = new RegularMember("Tyler", "Simpson");
-            rtbDisplay.Text = rg.ToString();
+            GoldMember rg = new GoldMember("Tyler", "Simpson");
+
+           
+            lbProducts.ItemsSource = Data.Products;
+            cbMembers.ItemsSource = Data.Members;
         }
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
@@ -35,6 +38,15 @@ namespace Midterm
         private void btnAddMember_Click(object sender, RoutedEventArgs e)
         {
             new AddMember().Show();
+        }
+
+        private void cbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Member selectedMember = (Member)cbMembers.SelectedItem;
+            Data.UpdateCurrentMember(selectedMember);
+
+            //Attach lisst to items source
+            lbPrevTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
         }
     }
 }

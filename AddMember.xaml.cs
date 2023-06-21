@@ -22,6 +22,31 @@ namespace Midterm
         public AddMember()
         {
             InitializeComponent();
+
+            lbMembers.ItemsSource = Data.Members;
+        }
+
+        private void lbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Member selectedMember = (Member)lbMembers.SelectedItem;
+            Data.UpdateCurrentMember(selectedMember);
+
+            //Attach lisst to items source
+            lbPrevTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
+        }
+
+        private void btnMember_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+
+            if(rand.Next(0,2) == 0)
+            {
+                Data.AddMemberToCollection(new GoldMember("Tyler", "Simpson"));
+            }
+            else
+            {
+                Data.AddMemberToCollection(new RegularMember("Tyler", "Simpson"));
+            }
         }
     }
 }

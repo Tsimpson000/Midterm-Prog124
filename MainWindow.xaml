@@ -7,15 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas Background="#FF631616">
-        <Button x:Name="btnAddProduct" Content="Prouct" Canvas.Left="154" Canvas.Top="280" HorizontalAlignment="Center" VerticalAlignment="Top" Width="131" Height="30" Click="btnAddProduct_Click"/>
-        <Button x:Name="btnAddMember" Content="Member" Canvas.Left="400" Canvas.Top="280" Width="131" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnAddMember_Click"/>
-        <RichTextBox Height="217" Width="220" Canvas.Left="246" Canvas.Top="32">
+        <Button x:Name="btnAddProduct" Content="Prouct" Canvas.Left="59" Canvas.Top="371" HorizontalAlignment="Left" VerticalAlignment="Center" Width="131" Height="30" Click="btnAddProduct_Click"/>
+        <Button x:Name="btnAddMember" Content="Member" Canvas.Left="214" Canvas.Top="394" Width="131" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnAddMember_Click"/>
+        <RichTextBox Height="217" Width="220" Canvas.Left="29" Canvas.Top="33">
             <FlowDocument>
                 <Paragraph>
                     <Run x:Name="rtbDisplay" Text="RichTextBox"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <ListBox x:Name="lbProducts" Height="316" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="312" Canvas.Top="55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ListBox x:Name="lbPrevTransactions" Height="316" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="563" Canvas.Top="55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbMembers" Canvas.Left="563" Canvas.Top="17" Width="223" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="cbMembers_SelectionChanged"/>
 
     </Canvas>
 </Window>

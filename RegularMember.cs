@@ -19,7 +19,7 @@ namespace Midterm
 
         public override void DeductPoints(Product product)
         {
-            throw new NotImplementedException();
+            Points -= product.Points;
         }
     }
 }

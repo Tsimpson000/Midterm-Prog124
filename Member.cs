@@ -40,7 +40,7 @@ namespace Midterm
         }
         public override string ToString()
         {
-            return $"{GetType().Name} - {_firstName} {_lastName} - {_points} - {_memberNumber}";
+            return $"{GetType().Name} - {_firstName} {_lastName}. Points: {_points}. Member #: {_memberNumber}";
         }
 
     }

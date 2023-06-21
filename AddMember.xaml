@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="AddMember" Height="450" Width="800">
     <Canvas Background="#FF181F5F">
-        
+        <ListBox x:Name="lbMembers" Height="377" Width="232" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="237" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="29" SelectionChanged="lbMembers_SelectionChanged"/>
+        <ListBox x:Name="lbPrevTransactions" Height="348" Width="271" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="506" Canvas.Top="29"/>
+        <Button x:Name="btnMember" Content="Test Member" Canvas.Left="92" Canvas.Top="183" Height="48" Width="86" Click="btnMember_Click"/>
+
     </Canvas>
 </Window>

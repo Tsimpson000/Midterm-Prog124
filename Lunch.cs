@@ -8,8 +8,15 @@ namespace Midterm
 {
     public class Lunch : Food
     {
-        public Lunch(string name, double price, int points) : base(name, price, points)
+        bool _isCombo;
+        public Lunch(string name, double price, int points, bool isHeated, bool isCombo) : base(name, price, points, isHeated)
         {
+            _isCombo = isCombo;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $" Combo - {_isCombo}";
         }
     }
 }

@@ -8,8 +8,14 @@ namespace Midterm
 {
     internal class GiftCard : Product
     {
-        public GiftCard(string name, double price, int points) : base(name, price, points)
+        double _amount;
+        public GiftCard(string name, double price, int points, double amount) : base(name, price, points)
         {
+            _amount = amount;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $" Coolor - {_amount}";
         }
     }
 }

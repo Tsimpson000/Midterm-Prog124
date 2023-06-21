@@ -8,8 +8,14 @@ namespace Midterm
 {
     public class Tumblers : Merchandise
     {
-        public Tumblers(string name, double price, int points) : base(name, price, points)
+        string _color;
+        public Tumblers(string name, double price, int points, string color) : base(name, price, points)
         {
+            _color = color;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $" Color - {_color}";
         }
     }
 }

@@ -7,18 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas Background="#FF631616">
-        <Button x:Name="btnAddProduct" Content="Prouct" Canvas.Left="59" Canvas.Top="371" HorizontalAlignment="Left" VerticalAlignment="Center" Width="131" Height="30" Click="btnAddProduct_Click"/>
-        <Button x:Name="btnAddMember" Content="Member" Canvas.Left="214" Canvas.Top="394" Width="131" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnAddMember_Click"/>
-        <RichTextBox Height="217" Width="220" Canvas.Left="29" Canvas.Top="33">
-            <FlowDocument>
-                <Paragraph>
-                    <Run x:Name="rtbDisplay" Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <ListBox x:Name="lbProducts" Height="316" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="312" Canvas.Top="55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <ListBox x:Name="lbPrevTransactions" Height="316" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="563" Canvas.Top="55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <ComboBox x:Name="cbMembers" Canvas.Left="563" Canvas.Top="17" Width="223" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="cbMembers_SelectionChanged"/>
+        <Button x:Name="btnAddProduct" Content="Products" Canvas.Left="10" Canvas.Top="378" HorizontalAlignment="Center" VerticalAlignment="Top" Width="131" Height="30" Click="btnAddProduct_Click"/>
+        <Button x:Name="btnAddMember" Content="Membership" Canvas.Left="167" Canvas.Top="378" Width="131" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnAddMember_Click"/>
+        <ListBox x:Name="lbProducts" Height="353" Width="222" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="318" Canvas.Top="55" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="lbProducts_SelectionChanged"/>
+        <ListBox x:Name="lbPrevTransactions" Height="353" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="563" Canvas.Top="55" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbMembers" Canvas.Left="10" Canvas.Top="61" Width="288" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="cbMembers_SelectionChanged"/>
+        <Button x:Name="btnBuyProduct" Content="Buy&#xD;&#xA;" Canvas.Left="76" Canvas.Top="229" HorizontalAlignment="Left" VerticalAlignment="Center" Height="46" Width="50" Click="btnBuyProduct_Click"/>
+        <Button x:Name="btnUsePoints" Content="Points&#xA;" Canvas.Left="182" Canvas.Top="229" Height="46" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnUsePoints_Click"/>
+        <Label Content="MEMBERS" Canvas.Left="68" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172" Height="56" FontSize="36"/>
+        <Label Content="PRODUCTS" Canvas.Left="334" Width="190" Height="56" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-6"/>
+        <Label Content="HISTORY" Canvas.Left="598" Width="154" Height="56" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-6"/>
 
     </Canvas>
 </Window>

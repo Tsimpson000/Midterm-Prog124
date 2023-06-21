@@ -10,6 +10,7 @@ namespace Midterm
     {
         protected Merchandise(string name, double price, int points) : base(name, price, points)
         {
+            
         }
     }
 }

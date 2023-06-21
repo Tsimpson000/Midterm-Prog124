@@ -8,8 +8,10 @@ namespace Midterm
 {
     public abstract class Food : Product
     {
-        protected Food(string name, double price, int points) : base(name, price, points)
+        bool _isHeated;
+        protected Food(string name, double price, int points, bool isHeated) : base(name, price, points)
         {
+            _isHeated = isHeated;
         }
     }
 }

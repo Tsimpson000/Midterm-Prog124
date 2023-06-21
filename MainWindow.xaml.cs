@@ -48,5 +48,31 @@ namespace Midterm
             //Attach lisst to items source
             lbPrevTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
         }
+
+        private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
+        {
+            if(Data.CurrentProduct != null & Data.CurrentMember != null)
+            {
+                Data.CurrentMember.AddProduct(Data.CurrentProduct);
+                Data.CurrentMember.AddPoints(Data.CurrentProduct);
+                cbMembers.Items.Refresh();
+            }
+        }
+
+        private void lbProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Product currentlySelected = (Product)lbProducts.SelectedItem;
+            Data.UpdateCurrentProduct(currentlySelected);
+        }
+
+        private void btnUsePoints_Click(object sender, RoutedEventArgs e)
+        {
+            if (Data.CurrentProduct != null & Data.CurrentMember != null)
+            {
+                Data.CurrentMember.AddProduct(Data.CurrentProduct);
+                Data.CurrentMember.DeductPoints(Data.CurrentProduct);
+                cbMembers.Items.Refresh();
+            }
+        }
     }
 }

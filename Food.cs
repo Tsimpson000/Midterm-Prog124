@@ -13,5 +13,9 @@ namespace Midterm
         {
             _isHeated = isHeated;
         }
+        public override string ToString()
+        {
+            return base.ToString() + $" - Heated: {_isHeated}";
+        }
     }
 }

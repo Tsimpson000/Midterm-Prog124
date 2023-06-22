@@ -15,7 +15,7 @@ namespace Midterm
         }
         public override string ToString()
         {
-            return base.ToString() + $" Color - {_color}";
+            return base.ToString() + $" - Color: {_color}";
         }
     }
 }

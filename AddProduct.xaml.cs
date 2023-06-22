@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Midterm.Drink;
 
 namespace Midterm
 {
@@ -35,16 +36,6 @@ namespace Midterm
             cbSize.Items.Add("Trenta");
             cbSize.SelectedIndex = 0;
         }
-            private void btnTestProduct_Click(object sender, RoutedEventArgs e)
-        {
-            Random rand = new Random();
-            double price = rand.Next(1, 11) + rand.NextDouble();
-            int point = rand.Next(100, 1001);
-            
-            Tea tea = new Tea("tea", price, point, (Drink.DrinkSize)rand.Next(0,4));
-
-            Data.AddProductToCollection(tea);
-        }
 
         private void btnTea_Click(object sender, RoutedEventArgs e)
         {
@@ -64,6 +55,59 @@ namespace Midterm
             Drink.DrinkSize drinkSize = (Drink.DrinkSize)cbSize.SelectedIndex;
 
             Data.AddProductToCollection(new Coffee(name, price, points, drinkSize));
+        }
+
+        private void btnBreakfast_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            double price = double.Parse(txtPrice.Text);
+            int points = int.Parse(txtPoints.Text);
+            bool isHeated = ckHeated.IsChecked.Value;
+            bool hasDairy = ckDairyCombo.IsChecked.Value;
+
+            Data.AddProductToCollection(new Breakfast(name, price, points, isHeated, hasDairy));
+        }
+
+        private void btnLunch_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            double price = double.Parse(txtPrice.Text);
+            int points = int.Parse(txtPoints.Text);
+
+            bool isHeated = ckHeated.IsChecked.Value;
+            bool isCombo = ckDairyCombo.IsChecked.Value;
+
+            Data.AddProductToCollection(new Lunch(name, price, points, isHeated, isCombo));
+        }
+
+        private void btnTumbler_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            double price = double.Parse(txtPrice.Text);
+            int points = int.Parse(txtPoints.Text);
+            string color = txtColorStyle.Text;
+
+            Data.AddProductToCollection(new Tumblers(name, price, points, color));
+        }
+
+        private void btnMug_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            double price = double.Parse(txtPrice.Text);
+            int points = int.Parse(txtPoints.Text);
+            string style = txtColorStyle.Text;
+
+            Data.AddProductToCollection(new Mugs(name, price, points, style));
+        }
+
+        private void btnGiftCard_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+            double price = double.Parse(txtPrice.Text);
+            int points = int.Parse(txtPoints.Text);
+            double amount = double.Parse(txtPrice.Text);
+
+            Data.AddProductToCollection(new GiftCard(name, price, points, amount));
         }
     }
 }

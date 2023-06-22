@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="AddProduct" Height="450" Width="800">
     <Canvas Background="#FF39673E">
-        <ListBox x:Name="lbProduct" Height="402" Width="344" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="446" Canvas.Top="11" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="btnTestProduct" Content="Test Add&#xD;&#xA;" Canvas.Left="113" Canvas.Top="335" Height="67" Width="171" Click="btnTestProduct_Click"/>
-        <TextBox x:Name="txtPrice" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="49" Width="179" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26"/>
-        <TextBox x:Name="txtPoints" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="89" Width="179" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26"/>
-        <TextBox x:Name="txtName" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="10" Width="179" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26"/>
-        <Canvas Height="92" Width="271" Canvas.Left="11" Canvas.Top="128" Background="#FFCC6767" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+        <ListBox x:Name="lbProduct" Height="402" Width="344" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="374" Canvas.Top="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPrice" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="49" Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" FontSize="16"/>
+        <TextBox x:Name="txtPoints" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="89" Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" FontSize="16"/>
+        <TextBox x:Name="txtName" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="10" Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" FontSize="16"/>
+        <Canvas Height="86" Width="271" Canvas.Left="10" Canvas.Top="123" Background="#FFCC6767" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -29,7 +28,7 @@
         <Label Content="Name" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="34" VerticalAlignment="Top" Width="58" FontSize="16"/>
         <Label Content="Price" Canvas.Left="10" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top" Width="58" Height="35" RenderTransformOrigin="0.529,1.035" FontSize="16"/>
         <Label Content="Points" Canvas.Left="10" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top" Height="34" Width="58" FontSize="16"/>
-        <Canvas Height="92" Width="271" Canvas.Left="11" Canvas.Top="230" Background="#FFCC6767" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Canvas Height="82" Width="271" Canvas.Left="10" Canvas.Top="213" Background="#FFCC6767" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -38,8 +37,35 @@
                     <TranslateTransform X="0.606"/>
                 </TransformGroup>
             </Canvas.RenderTransform>
-            <Button x:Name="btnBreakfast" Content="Breakfast" Canvas.Left="69" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Center" Width="76" Height="30"/>
-            <Button x:Name="btnLunch" Content="Lunch" Canvas.Left="176" Canvas.Top="45" Width="77" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnBreakfast" Content="Breakfast" Canvas.Left="177" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="30" Click="btnBreakfast_Click"/>
+            <Button x:Name="btnLunch" Content="Lunch" Canvas.Left="176" Canvas.Top="45" Width="77" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnLunch_Click"/>
+            <CheckBox x:Name="ckDairyCombo" Content="Dairy or Combo" Canvas.Left="30" Canvas.Top="47" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckHeated" Content="Heated" Canvas.Left="32" Canvas.Top="11" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Canvas>
+        <Canvas Height="71" Width="271" Canvas.Left="10" Canvas.Top="298" Background="#FFCC6767" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.579"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.606"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Button x:Name="btnMug" Content="Mug" Canvas.Left="177" Canvas.Top="35" Width="77" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnMug_Click"/>
+            <Label Content="Color/Style" Canvas.Left="-2" Canvas.Top="-1" Height="34" Width="95" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="btnTumbler" Content="Tumbler" Canvas.Left="88" Canvas.Top="34" Width="77" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnTumbler_Click"/>
+            <TextBox x:Name="txtColorStyle" Canvas.Left="91" TextWrapping="Wrap" Canvas.Top="5" Width="162" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        </Canvas>
+        <Canvas Height="43" Width="271" Canvas.Left="10" Canvas.Top="375" Background="#FFCC6767" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.579"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.606"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Button x:Name="btnGiftCard" Content="Gift Card" Canvas.Left="49" Canvas.Top="9" Width="162" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnGiftCard_Click"/>
         </Canvas>
 
     </Canvas>

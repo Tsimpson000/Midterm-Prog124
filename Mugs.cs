@@ -15,7 +15,7 @@ namespace Midterm
         }
         public override string ToString()
         {
-            return base.ToString() + $" Coolor - {_design}";
+            return base.ToString() + $" - Design: {_design}";
         }
     }
 }

@@ -17,6 +17,7 @@
         <Label Content="MEMBERS" Canvas.Left="68" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172" Height="56" FontSize="36"/>
         <Label Content="PRODUCTS" Canvas.Left="334" Width="190" Height="56" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-6"/>
         <Label Content="HISTORY" Canvas.Left="598" Width="154" Height="56" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-6"/>
+        <Label x:Name="lblPoints" Content="" Canvas.Left="68" Width="172" Height="56" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="128"/>
 
     </Canvas>
 </Window>

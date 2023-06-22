@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Midterm
 {
@@ -35,18 +37,21 @@ namespace Midterm
             lbPrevTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
         }
 
-        private void btnMember_Click(object sender, RoutedEventArgs e)
+        private void btnAddMember_Click(object sender, RoutedEventArgs e)
         {
-            Random rand = new Random();
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            bool goldMembership = rbGold.IsChecked.Value;
 
-            if(rand.Next(0,2) == 0)
+            if (goldMembership == true)
             {
-                Data.AddMemberToCollection(new GoldMember("Tyler", "Simpson"));
+                Data.AddMemberToCollection(new GoldMember(firstName, lastName));
             }
             else
             {
-                Data.AddMemberToCollection(new RegularMember("Tyler", "Simpson"));
+                Data.AddMemberToCollection(new RegularMember(firstName, lastName));
             }
+
         }
     }
 }

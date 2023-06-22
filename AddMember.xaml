@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="AddMember" Height="450" Width="800">
     <Canvas Background="#FF181F5F">
-        <ListBox x:Name="lbMembers" Height="377" Width="232" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="237" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="29" SelectionChanged="lbMembers_SelectionChanged"/>
-        <ListBox x:Name="lbPrevTransactions" Height="348" Width="271" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="506" Canvas.Top="29"/>
-        <Button x:Name="btnMember" Content="Test Member" Canvas.Left="92" Canvas.Top="183" Height="48" Width="86" Click="btnMember_Click"/>
+        <ListBox x:Name="lbMembers" Height="348" Width="250" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="274" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="76" SelectionChanged="lbMembers_SelectionChanged"/>
+        <ListBox x:Name="lbPrevTransactions" Height="348" Width="250" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="540" Canvas.Top="76" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtFirstName" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="87" Width="140" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtLastName" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="140" Width="140" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+        <Label Content="First Name" Canvas.Top="83" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Width="101" Canvas.Left="8"/>
+        <Label Content="Last Name" Canvas.Left="8" Canvas.Top="132" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
+        <GroupBox Height="146" Header="Membership Type" Width="222" Canvas.Left="19" Canvas.Top="219" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White">
+            <StackPanel Background="#FF5B0F92">
+                <RadioButton x:Name="rbGold" Content="Gold Member" Height="37" Foreground="White" FontSize="16"/>
+                <RadioButton x:Name="rbReg" Content="Regular Member" Height="36" Foreground="White" FontSize="16"/>
+                <Button x:Name="btnAddMember" Content="Add Member" Width="104" Height="35" Click="btnAddMember_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Transaction History" Canvas.Top="45" FontSize="16" Foreground="White" Width="154" Canvas.Left="588" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Canvas>
 </Window>

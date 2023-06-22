@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Tyler Simpson
+//June 21 2023
+//Prog 124 Midterm
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +27,13 @@ namespace Midterm
         public MainWindow()
         {
             InitializeComponent();
-            GoldMember rg = new GoldMember("Tyler", "Simpson");
+            
 
            
             lbProducts.ItemsSource = Data.Products;
             cbMembers.ItemsSource = Data.Members;
+            
+            
         }
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
@@ -44,9 +50,10 @@ namespace Midterm
         {
             Member selectedMember = (Member)cbMembers.SelectedItem;
             Data.UpdateCurrentMember(selectedMember);
-
+            
             //Attach lisst to items source
             lbPrevTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
+            
         }
 
         private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
